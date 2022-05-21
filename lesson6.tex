@@ -1,0 +1,77 @@
+\documentclass[12pt, a4paper]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage{amsfonts,amssymb, amsmath}
+\usepackage{tikz,pgfplots}
+\usepackage{graphicx}
+\usepackage{float}
+
+
+\def\eq1{y=\dfrac{x}{3x^2+x+1}}
+\newcommand{\set}[1]{\setlength\itemsep{#1em}}
+\newcommand\calculator{\tikz{
+		\node (c) [inner sep=0pt, draw, fill=black, anchor=south west]{\phantom{N}};
+		\begin{scope}[x=(c.south east),y=(c.north west)]    \fill[white] (.1,.7) rectangle (.9,.9);    
+		\foreach \x in {.1, .33, .55, .79}{    
+		\foreach \y in {.1, .24, .38, .53}{    
+		\fill[white] (\x,\y) rectangle +(.11,.07);}} 
+		\end{scope} }}
+		\def\calcicon#1{\noindent#1 \calculator\ }
+
+
+
+
+\begin{document}
+
+
+
+\textbf{WHAT IS HISTORY?}
+\begin{enumerate}
+\set{1.2}
+\item\calculator\ Let us calculate 2+2.
+\item This is the symbol for the set of all real number: $\mathbb{R}$.
+\item This is the symbol for the set of integers: $\mathbb{Z}$.
+\item This is the symbol for the set of all rational number $\mathbb{Q}$
+\item What is the need to learn history?
+\item Are there one history or several histories?
+\item Who has the power to write history?
+\end{enumerate}
+\vspace{1cm}
+we can also use this instead of margin.
+[top=1in,botton=1in,right=0.5in,left=0.5in]
+
+\vspace{1cm}
+You can make something comment by using percent symbol. 
+% This won't print. 
+But this would.
+
+\vspace{1cm}
+micros 
+\begin{enumerate}
+\item Let's examination equation $\eq1$.
+\end{enumerate}
+
+\vspace{1cm}
+inserting graphics 
+\begin{enumerate}
+\item Let's put the image here.\\ 
+
+\includegraphics[scale=0.2]{sarika}\\
+
+
+\vspace{1cm}
+\begin{center}
+\includegraphics[width=0.2\textwidth]{sarika}
+\end{center}
+\end{enumerate}
+
+\vspace{1cm}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.2\textwidth]{sarika}
+\caption{This is me}
+
+\end{figure}
+
+\end{document}
